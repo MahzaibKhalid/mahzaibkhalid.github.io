@@ -35,6 +35,18 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.profile-sidebar img.profile-photo {
+  width: min(170px, 62vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .icon-sprite {
   position: absolute;
   width: 0;
