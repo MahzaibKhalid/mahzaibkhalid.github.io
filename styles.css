@@ -41,7 +41,7 @@ img {
 }
 
 .profile-sidebar img.profile-photo {
-  width: min(170px, 62vw);
+  width: min(185px, 62vw);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
@@ -132,7 +132,7 @@ svg circle {
 
 .page-layout {
   display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
+  grid-template-columns: 330px minmax(0, 1fr);
   gap: clamp(22px, 3vw, 42px);
   width: min(1620px, calc(100% - 64px));
   margin: 0 auto;
@@ -162,7 +162,7 @@ svg circle {
 
 .profile-photo {
   display: block;
-  width: min(170px, 62vw);
+  width: min(185px, 62vw);
   aspect-ratio: 1 / 1;
   margin: 0 auto 18px;
   border-radius: 50%;
@@ -265,7 +265,10 @@ svg circle {
 }
 
 .hero {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: clamp(22px, 4vw, 44px);
+  align-items: start;
   padding: 0;
   border-bottom: 0;
   background: var(--surface);
@@ -362,6 +365,38 @@ h3 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 24px;
+}
+
+.hero-summary {
+  display: grid;
+  gap: 14px;
+  padding-top: 8px;
+}
+
+.hero-summary div {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-summary div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.hero-summary span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero-summary strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.96rem;
+  line-height: 1.45;
 }
 
 .button {
@@ -817,6 +852,12 @@ dd {
   .skill-band,
   .contact-section {
     display: block;
+  }
+
+  .hero-summary {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
   }
 
   .hero {
