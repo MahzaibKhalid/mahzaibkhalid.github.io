@@ -718,6 +718,12 @@ dd {
   font-weight: 800;
 }
 
+.supervisor-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
 .supervisor-card {
   border-left: 5px solid var(--accent);
 }
